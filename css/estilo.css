@@ -1,0 +1,53 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: white;
+}
+
+.titulo{
+    width: 500px;
+    position: relative;
+    left: 200px;
+    color: ghostwhite;
+    background-color: rgb(52, 87, 52);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.descripcion{
+    font-size: 20px;
+    width: 900px;
+    position: relative;
+    left: 30px;
+    text-align: justify;
+}
+
+.mapa_izq{
+    position: relative;
+    left: 30px;
+    
+}
+
+.titulo1{
+    width: 500px;
+    position: relative;
+    left: 1140px;
+    top: -847px;
+    color: ghostwhite;
+    background-color: rgb(52, 87, 52);
+    border-radius: 5px;
+    text-align: center;
+}
+.descripcion1{
+    font-size: 20px;
+    width: 600px;
+    position: relative;
+    left: 970px;
+    top: -846px;
+    text-align: justify;
+}
+
+.mapa_der{
+    position: relative;
+    left: 970px;
+    top: -799px;
+}

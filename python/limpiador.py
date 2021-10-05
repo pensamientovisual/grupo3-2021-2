@@ -2,7 +2,7 @@ from pandas.core.dtypes.missing import isnull
 
 
 contador = 0
-with open('CSVS/hapiscore_whr.csv', 'r') as texto:
+with open('CSVS\income_per_person_gdppercapita_ppp_inflation_adjusted.csv', 'r') as texto:
     lista = []
     for linea in texto:
         lista.append(linea)
@@ -26,8 +26,10 @@ list_pasajera = []
 for item in lista_final:
     pais = item.pop(0)
     list_pasajera.append(pais)
-    dato = float(item.pop())
-    list_pasajera.append(dato)
+    dato = item.pop(219)
+    dato_bueno = dato.replace("k", '00')
+    dato_final = dato_bueno.replace('.', '')
+    list_pasajera.append(int(dato_final))
     list_primero_ultimo.append(list_pasajera)
     list_pasajera = []
 
