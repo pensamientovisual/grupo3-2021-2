@@ -26,7 +26,7 @@ list_pasajera = []
 for item in lista_final:
     pais = item.pop(0)
     list_pasajera.append(pais)
-    dato = item.pop()
+    dato = float(item.pop())
     list_pasajera.append(dato)
     list_primero_ultimo.append(list_pasajera)
     list_pasajera = []
