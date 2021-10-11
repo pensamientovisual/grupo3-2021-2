@@ -1,6 +1,6 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: white;
+    background: #01171b;;
 }
 
 .titulo{
@@ -15,6 +15,7 @@ body{
 
 .descripcion{
     font-size: 20px;
+    color: ghostwhite;
     width: 900px;
     position: relative;
     left: 30px;
@@ -24,7 +25,39 @@ body{
 .mapa_izq{
     position: relative;
     left: 30px;
-    
+    width: 35%;
+    margin: left;
+}
+
+.mapa_izq path{
+    fill: #00394f;
+    stroke: #eee;
+    stroke-width: 1px;
+}
+
+.mapa_izq path:hover {
+    fill: #006284;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.mapa_der{
+    position: relative;
+    left: 30px;
+    width: 35%;
+    margin: right;
+}
+
+.mapa_der path{
+    fill: #00394f;
+    stroke: #eee;
+    stroke-width: 1px;
+}
+
+.mapa_der path:hover {
+    fill: #006284;
+    transition: 0.6s;
+    cursor: pointer;
 }
 
 .titulo1{
@@ -39,6 +72,7 @@ body{
 }
 .descripcion1{
     font-size: 20px;
+    color: ghostwhite;
     width: 600px;
     position: relative;
     left: 970px;
@@ -46,8 +80,4 @@ body{
     text-align: justify;
 }
 
-.mapa_der{
-    position: relative;
-    left: 970px;
-    top: -799px;
-}
+
