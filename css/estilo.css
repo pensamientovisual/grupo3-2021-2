@@ -3,6 +3,24 @@ body{
     background: #01171b;;
 }
 
+.navbar{
+    display: inline-block;
+    background: #00394f;
+    color: #eee;
+    padding: 10px 30px;
+    text-decoration: none;
+    position: relative;
+    margin-top: auto;
+}
+
+.navbar:hover{
+    background: #006284;
+}
+
+nav{
+    background: #365b77;
+}
+
 .titulo{
     width: 500px;
     position: relative;
