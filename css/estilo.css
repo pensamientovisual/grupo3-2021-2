@@ -3,6 +3,17 @@ body{
     background: #01171b;
 }
 
+.container{
+    padding: 5%;
+    text-align: center;
+    width: 80%;
+}
+
+#mapa_izq, #mapa_der {
+    display: inline-block;    
+    padding: 2%;   
+}
+
 .navbar{
     display: inline-block;
     background: #00394f;
@@ -41,71 +52,59 @@ nav {
 }
 
 .titulo{
-    width: 500px;
-    position: relative;
-    left: 200px;
     color: ghostwhite;
     background-color: rgb(52, 87, 52);
     border-radius: 5px;
     text-align: center;
+    margin: left;
     top: 70px;
 }
 
 .descripcion{
     font-size: 20px;
     color: ghostwhite;
-    width: 900px;
-    position: relative;
-    left: 30px;
+    margin: left;
     text-align: justify;
     top:90px;
 }
 
 .mapa_izq{
-    position: relative;
-    left: 30px;
-    width: 30%;
-    margin: left;
-    top:120px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
 }
 
 .mapa_izq path{
-    fill: #00394f;
     stroke: #eee;
     stroke-width: 1px;
-}
-
-.mapa_izq path:hover {
-    fill: #006284;
-    transition: 0.6s;
-    cursor: pointer;
 }
 
 .mapa_der{
     position: relative;
-    left: 990px;
-    top: -710px;
-    width: 30%;
-    margin: right;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
 }
 
 .mapa_der path{
-    fill: #00394f;
     stroke: #eee;
     stroke-width: 1px;
 }
 
-.mapa_der path:hover {
-    fill: #006284;
-    transition: 0.6s;
-    cursor: pointer;
+.mapa_nuevo{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.mapa_nuevo path{
+    stroke: #eee;
+    stroke-width: 1px;
 }
 
 .titulo1{
-    width: 500px;
     position: relative;
-    left: 1140px;
-    top: -810px;
     color: ghostwhite;
     background-color: rgb(52, 87, 52);
     border-radius: 5px;
@@ -114,9 +113,40 @@ nav {
 .descripcion1{
     font-size: 20px;
     color: ghostwhite;
-    width: 600px;
-    position: relative;
-    left: 970px;
-    top: -795px;
     text-align: justify;
 }
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}

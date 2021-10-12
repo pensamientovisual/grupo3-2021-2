@@ -34,3 +34,16 @@ for item in lista_final:
     list_pasajera = []
 
 print(list_primero_ultimo)
+
+
+mayor = 0
+menor = 1000000
+for item in list_primero_ultimo:
+    if mayor >= item[1] >= menor:
+        pass
+    elif item[1] > mayor:
+        mayor = item[1]
+    elif item[1] < menor:
+        menor = item[1]
+
+print(menor, mayor)
