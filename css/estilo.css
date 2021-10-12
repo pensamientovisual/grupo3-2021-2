@@ -48,7 +48,6 @@ nav{
 }
 
 .mapa_izq path{
-    fill: #00394f;
     stroke: #eee;
     stroke-width: 1px;
 }
@@ -62,7 +61,6 @@ nav{
 }
 
 .mapa_der path{
-    fill: #00394f;
     stroke: #eee;
     stroke-width: 1px;
 }

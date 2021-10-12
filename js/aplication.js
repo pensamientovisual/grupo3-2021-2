@@ -3,18 +3,30 @@ $(document).ready(function(){
 
     paises.mouseenter(function(){
         var idpais = $(this).attr("id");
-        $("#prueba").text(idpais)
-        $('#'+idpais).fadeTo("fast", 0.5)
-        $('#'+idpais+'1').fadeTo("fast", 0.5)       
-        $("#prueba").text(idpais)
+        if (idpais.includes('1')){
+            var newidpais = idpais.substring(0, idpais.length - 1)
+            $('#'+idpais).fadeTo("fast", 0.5)
+            $('#'+newidpais).fadeTo("fast", 0.5)
+        }
+        else {
+            $('#'+idpais).fadeTo("fast", 0.5)
+            $('#'+idpais+'1').fadeTo("fast", 0.5)       
+            $("#prueba").text(idpais)
+        }
     });
 
     paises.mouseleave(function(){
         var idpais = $(this).attr("id");
-        $("#prueba").text(idpais)
-        $('#'+idpais).fadeTo("fast", 1)
-        $('#'+idpais+'1').fadeTo("fast", 1)
-        $("#prueba").text("soy un texto")
+        if (idpais.includes('1')){
+            var newidpais = idpais.substring(0, idpais.length - 1)
+            $('#'+idpais).fadeTo("fast", 1)
+            $('#'+newidpais).fadeTo("fast", 1)
+        }
+        else {
+            $('#'+idpais).fadeTo("fast", 1)
+            $('#'+idpais+'1').fadeTo("fast", 1)       
+            $("#prueba").text(idpais)
+        }
     });
 
 });
