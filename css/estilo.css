@@ -150,3 +150,11 @@ nav {
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+  #legend1 {    
+    font-size: 20px;
+    color: ghostwhite;
+    padding: 10px;
+    top:200px;
+  }
