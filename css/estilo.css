@@ -12,18 +12,15 @@ body{
     position: relative;
     margin-top: auto;
     font-weight: bold;
-    
 }
 
 .navbar .navbar.active{
     background:rgb(52, 87, 52);
-
 }
 
 .navpos{
     z-index: 1030;
-    position: fixed;
-    
+    position: fixed;    
 }
 
 .navbar:hover{
@@ -40,7 +37,7 @@ nav {
     left: 500px;
     color: ghostwhite;
     text-align: center;
-    top: 70px;  
+    top: 20px;  
 }
 
 .titulo{
