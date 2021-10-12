@@ -1,0 +1,25 @@
+
+
+.nav-item{
+ background-color:white;
+  borders: black;
+
+}
+.navbar-brand{
+  background-color: rgb(202,235,242);
+
+}
+.navbar.navbar-light.bg-light{
+  background-color: white;
+  height:50px;
+  z-index:900000;
+  position: fixed;
+}
+.navbarside {
+right: 0px;
+position: fixed;
+  height: 10px;
+  width:15%;
+  z-index:900000;
+  float:left;
+}
