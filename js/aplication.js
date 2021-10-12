@@ -77,14 +77,27 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     var opcion1 = $("#opcion1");
+    var idboton = 0
 
     opcion1.click(function(){
-        $(".titulo").hide();
-        $(".descripcion").hide();
-        $("#mapa_izq").hide();
-        $("#mapa_nuevo").show();
-        $("#h3").show();
-        $("#p3").show();
+        if (idboton == 0){
+            $(".titulo").hide();
+            $(".descripcion").hide();
+            $("#mapa_izq").hide();
+            $("#mapa_nuevo").show();
+            $("#h3").show();
+            $("#p3").show();
+            idboton = 1
+        }
+        else if (idboton == 1){
+            $(".titulo").show();
+            $(".descripcion").show();
+            $("#mapa_izq").show();
+            $("#mapa_nuevo").hide();
+            $("#h3").hide();
+            $("#p3").hide();
+            idboton = 0
+        }
     });
 
 });
