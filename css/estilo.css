@@ -1,6 +1,6 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #01171b;;
+    background: #01171b;
 }
 
 .container{
@@ -14,12 +14,50 @@ body{
     padding: 2%;   
 }
 
+.navbar{
+    display: inline-block;
+    background: #00394f;
+    color: #eee;
+    padding: 10px 30px;
+    text-decoration: none;
+    position: relative;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+.navbar .navbar.active{
+    background:rgb(52, 87, 52);
+}
+
+.navpos{
+    z-index: 1030;
+    position: fixed;    
+}
+
+.navbar:hover{
+    background: #006284;
+}
+
+nav {
+    background: #365b77;
+}
+
+.proyecto{
+    width: 500px;
+    position: relative;
+    left: 500px;
+    color: ghostwhite;
+    text-align: center;
+    top: 20px;  
+}
+
 .titulo{
     color: ghostwhite;
     background-color: rgb(52, 87, 52);
     border-radius: 5px;
     text-align: center;
     margin: left;
+    top: 70px;
 }
 
 .descripcion{
@@ -27,6 +65,7 @@ body{
     color: ghostwhite;
     margin: left;
     text-align: justify;
+    top:90px;
 }
 
 .mapa_izq{
