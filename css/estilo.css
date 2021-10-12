@@ -1,6 +1,6 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #01171b;;
+    background: #01171b;
 }
 
 .navbar{
@@ -11,14 +11,36 @@ body{
     text-decoration: none;
     position: relative;
     margin-top: auto;
+    font-weight: bold;
+    
+}
+
+.navbar .navbar.active{
+    background:rgb(52, 87, 52);
+
+}
+
+.navpos{
+    z-index: 1030;
+    position: fixed;
+    
 }
 
 .navbar:hover{
     background: #006284;
 }
 
-nav{
+nav {
     background: #365b77;
+}
+
+.proyecto{
+    width: 500px;
+    position: relative;
+    left: 500px;
+    color: ghostwhite;
+    text-align: center;
+    top: 70px;  
 }
 
 .titulo{
@@ -29,6 +51,7 @@ nav{
     background-color: rgb(52, 87, 52);
     border-radius: 5px;
     text-align: center;
+    top: 70px;
 }
 
 .descripcion{
@@ -38,6 +61,7 @@ nav{
     position: relative;
     left: 30px;
     text-align: justify;
+    top:90px;
 }
 
 .mapa_izq{
@@ -45,6 +69,7 @@ nav{
     left: 30px;
     width: 30%;
     margin: left;
+    top:120px;
 }
 
 .mapa_izq path{
@@ -62,7 +87,7 @@ nav{
 .mapa_der{
     position: relative;
     left: 990px;
-    top: -815px;
+    top: -710px;
     width: 30%;
     margin: right;
 }
@@ -83,7 +108,7 @@ nav{
     width: 500px;
     position: relative;
     left: 1140px;
-    top: -868px;
+    top: -810px;
     color: ghostwhite;
     background-color: rgb(52, 87, 52);
     border-radius: 5px;
@@ -95,8 +120,6 @@ nav{
     width: 600px;
     position: relative;
     left: 970px;
-    top: -868px;
+    top: -795px;
     text-align: justify;
 }
-
-
