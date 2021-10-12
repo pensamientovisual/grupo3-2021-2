@@ -53,12 +53,6 @@ nav{
     stroke-width: 1px;
 }
 
-.mapa_izq path:hover {
-    fill: #006284;
-    transition: 0.6s;
-    cursor: pointer;
-}
-
 .mapa_der{
     position: relative;
     left: 990px;
@@ -71,12 +65,6 @@ nav{
     fill: #00394f;
     stroke: #eee;
     stroke-width: 1px;
-}
-
-.mapa_der path:hover {
-    fill: #006284;
-    transition: 0.6s;
-    cursor: pointer;
 }
 
 .titulo1{

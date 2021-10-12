@@ -1,13 +1,20 @@
 $(document).ready(function(){
     var paises = $(".pais");
 
-    discos.mouseenter(function(){
-        $(this).fadeTo("fast", 0.5);
-
+    paises.mouseenter(function(){
+        var idpais = $(this).attr("id");
+        $("#prueba").text(idpais)
+        $('#'+idpais).fadeTo("fast", 0.5)
+        $('#'+idpais+'1').fadeTo("fast", 0.5)       
+        $("#prueba").text(idpais)
     });
 
-    discos.mouseleave(function(){
-        $(this).fadeTo("fast", 1);
+    paises.mouseleave(function(){
+        var idpais = $(this).attr("id");
+        $("#prueba").text(idpais)
+        $('#'+idpais).fadeTo("fast", 1)
+        $('#'+idpais+'1').fadeTo("fast", 1)
+        $("#prueba").text("soy un texto")
     });
 
 });
