@@ -36,3 +36,43 @@
   .sticky + .content {
     padding-top: 60px;
   }
+
+
+  a:link{
+    text-decoration: none;
+ }
+
+ a:visited {
+ text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  padding:10%;
+  padding-bottom: 5%;
+  font-size: 40px;
+}
+h3{
+  text-align: justify;
+  padding-top: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 0;
+  font-size: 25px;
+  font-weight: lighter;
+}
+h4{
+  text-align: justify;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 25px;
+  font-weight: lighter;
+}

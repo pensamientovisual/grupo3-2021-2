@@ -47,7 +47,7 @@
     -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
-    font-size: 16px;
+    font-size: 25px;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
@@ -58,6 +58,10 @@
 .container2 .btn:hover {
     background-color: black;
   }
+
+.container2 .boton{
+   padding:20%;
+}
 
    </style>
 
@@ -75,27 +79,22 @@
       <img src="mapa-svg/imagenmapa.jpg" alt="Notebook" style="width:100%;">   
          <div class="content">
             <h2 id="sec_inicio" > ¿ES AMÉRICA UN CONTINENTE FELIZ?</h2>
-            <p>Quiere la boca exhausta vid, kiwi, piña y fugaz jamón. Fabio me exige, sin tapujos, que añada cerveza al whisky. Jovencillo emponzoñado de whisky, ¡qué figurota exhibes! La cigüeña tocaba cada vez mejor el saxofón y el búho pedía kiwi y queso. El jefe buscó el éxtasis en un imprevisto baño de whisky y gozó como un duque.</p>
-            <p>Exhíbanse politiquillos zafios, con orejas kilométricas y uñas de gavilán. El cadáver de Wamba, rey godo de España, fue exhumado y trasladado en una caja de zinc que pesó un kilo. El pingüino Wenceslao hizo kilómetros bajo exhaustiva lluvia y frío, añoraba a su querido cachorro. El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
-            <button class="btn">Averiguar más</button>
+            <h3>Quiere la boca exhausta vid, kiwi, piña y fugaz jamón. Fabio me exige, sin tapujos, que añada cerveza al whisky. Jovencillo emponzoñado de whisky, ¡qué figurota exhibes! La cigüeña tocaba cada vez mejor el saxofón y el búho pedía kiwi y queso. El jefe buscó el éxtasis en un imprevisto baño de whisky y gozó como un duque.</h3>
+            <h4>Exhíbanse politiquillos zafios, con orejas kilométricas y uñas de gavilán. El cadáver de Wamba, rey godo de España, fue exhumado y trasladado en una caja de zinc que pesó un kilo. El pingüino Wenceslao hizo kilómetros bajo exhaustiva lluvia y frío, añoraba a su querido cachorro. El veloz murciélago hindú comía feliz cardillo y kiwi.</h4>
+            <div style="position: relative; padding-top: 12%;">
+               <a class="btn" href="#navbar">Averiguar más</a>
          </div>
       </div>
    </div>
 
    <div id="navbar">
-      <a class="active" href="javascript:void(0)">Inicio</a>
-      <a href="javascript:void(0)">Mapa</a>
-      <a href="javascript:void(0)">Gráficos</a>
-      <a href="javascript:void(0)">Nosotros</a>
+      <a href="#sec_inicio" class="active" href="javascript:void(0)">Inicio</a>
+      <a href="#sec_mapa" href="javascript:void(0)">Mapa</a>
+      <a href="#sec_mapa" href="javascript:void(0)">Gráficos</a>
+      <a href="#sec_nosotros" href="javascript:void(0)">Nosotros</a>
     </div>
 
-   <div>
-      <nav class="navpos">
-         <a href="#sec_inicio" class="navbar"> Inicio</a>
-         <a href="#sec_mapa" class="navbar"> Mapas</a>
-         <a href="#sec_mapa" class="navbar"> Gráficos</a>
-         <a href="#sec_nosotros" class="navbar"> Nosotros</a>
-      </nav>
+
 
       <h1 id="sec_mapa" class="titulo" >Happiness score (WHR)</h1>
       <div>
