@@ -1,18 +1,60 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #01171b;
+    background: #e3ece9;
 }
+
+
 
 .container{
     padding: 5%;
     text-align: center;
-    width: 80%;
+    width: 100%;
 }
 
-#mapa_izq, #mapa_der {
-    display: inline-block;    
-    padding: 2%;   
+
+/* inicio codigo no usado*/
+
+.containerpi {
+    position: relative;
+    top:0;
+    width: 100%;
+    margin: 0 auto; /* Center it */
+  }
+
+.containerpi .content {
+    position: absolute;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding-top: 50px; /* Some padding */
+    height: 100%;
+  }
+
+.mapafondo{
+    fill: rgb(26, 25, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
 }
+
+
+.text-block {  /* bloque de texto sin opacidad*/
+    position: absolute;
+    top: 100px;
+    right: 75px;
+    left: 75px;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+/* fin codigo no usado*/
+
+
 
 .navbar{
     display: inline-block;
@@ -42,14 +84,21 @@ nav {
     background: #365b77;
 }
 
-.proyecto{
-    width: 500px;
-    position: relative;
-    left: 500px;
-    color: ghostwhite;
-    text-align: center;
-    top: 20px;  
+
+
+/* fin página inicio, navbar, encabezado en general*/
+
+
+
+
+
+
+#mapa_izq, #mapa_der {
+    display: inline-block;    
+    padding: 2%;   
 }
+
+
 
 .titulo{
     color: ghostwhite;
@@ -150,11 +199,3 @@ nav {
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-
-  #legend1 {    
-    font-size: 20px;
-    color: ghostwhite;
-    padding: 10px;
-    top:200px;
-  }
