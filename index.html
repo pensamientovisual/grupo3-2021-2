@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
    <style>
    * {
      box-sizing: border-box;
@@ -12,6 +12,7 @@
      font-size: 17px;
      height: 100%;
      margin:0;
+     background-size: cover;
    }
    
    .container2 {
@@ -35,7 +36,7 @@
      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
      color: #f1f1f1;
      width: 100%;
-     padding: 20px;
+     padding: 1%;
      height: 100%;
    }
 
@@ -47,8 +48,8 @@
     -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
-    font-size: 25px;
-    padding: 12px 24px;
+    font-size: 1.5vw;
+    padding: 0.75% 1.5%;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -62,6 +63,7 @@
 .container2 .boton{
    padding:20%;
 }
+
 
    </style>
 
@@ -78,7 +80,7 @@
    <div id="sec_inicio" class="container2">
       <img src="mapa-svg/imagenmapa.jpg" alt="Notebook" style="width:100%;">   
          <div class="content">
-            <h2 id="sec_inicio" > ¿ES AMÉRICA UN CONTINENTE FELIZ?</h2>
+            <h2 id="sec_inicio"> ¿ES AMÉRICA UN CONTINENTE FELIZ?</h2>
             <h3>Quiere la boca exhausta vid, kiwi, piña y fugaz jamón. Fabio me exige, sin tapujos, que añada cerveza al whisky. Jovencillo emponzoñado de whisky, ¡qué figurota exhibes! La cigüeña tocaba cada vez mejor el saxofón y el búho pedía kiwi y queso. El jefe buscó el éxtasis en un imprevisto baño de whisky y gozó como un duque.</h3>
             <h4>Exhíbanse politiquillos zafios, con orejas kilométricas y uñas de gavilán. El cadáver de Wamba, rey godo de España, fue exhumado y trasladado en una caja de zinc que pesó un kilo. El pingüino Wenceslao hizo kilómetros bajo exhaustiva lluvia y frío, añoraba a su querido cachorro. El veloz murciélago hindú comía feliz cardillo y kiwi.</h4>
             <div style="position: relative; padding-top: 12%;">
@@ -89,9 +91,8 @@
 
    <div id="navbar">
       <a href="#sec_inicio" class="active" href="javascript:void(0)">Inicio</a>
-      <a href="#sec_mapa" href="javascript:void(0)">Mapa</a>
-      <a href="#sec_mapa" href="javascript:void(0)">Gráficos</a>
-      <a href="#sec_nosotros" href="javascript:void(0)">Nosotros</a>
+      <a href="#sec_mapa" href="javascript:void(0)">Mapa y Gráficos</a>
+      <a href="#sec_conclusiones" href="javascript:void(0)">Más Información</a>
     </div>
 
 
@@ -701,6 +702,10 @@
 </svg>
   </div>
 
+
+ <footer>
+   Fuentes Información
+   </footer>
 
    <script src="https://d3js.org/d3.v5.min.js" defer></script>
    <script src="js/index.js" defer></script>

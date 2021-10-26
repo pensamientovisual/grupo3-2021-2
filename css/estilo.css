@@ -203,3 +203,17 @@ nav {
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+  footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    text-align: justify;
+    font-size: 0.9vw;
+    padding: 0.5% 1%;
+    font-weight: lighter;
+  }
