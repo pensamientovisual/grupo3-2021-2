@@ -1,20 +1,22 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #01171b;
+    background: #e3ece9;
 }
+
+
 
 .container{
     padding: 5%;
     text-align: center;
-    width: 80%;
+    width: 100%;
 }
 
-#mapa_izq, #mapa_der {
-    display: inline-block;    
-    padding: 2%;   
-}
 
-.navbar{
+/*.navbar{
     display: inline-block;
     background: #00394f;
     color: #eee;
@@ -42,14 +44,21 @@ nav {
     background: #365b77;
 }
 
-.proyecto{
-    width: 500px;
-    position: relative;
-    left: 500px;
-    color: ghostwhite;
-    text-align: center;
-    top: 20px;  
+
+
+/* fin página inicio, navbar, encabezado en general*/
+
+
+
+
+
+
+#mapa_izq, #mapa_der {
+    display: inline-block;    
+    padding: 2%;   
 }
+
+
 
 .titulo{
     color: ghostwhite;
@@ -152,9 +161,15 @@ nav {
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 
-  #legend1 {    
-    font-size: 20px;
-    color: ghostwhite;
-    padding: 10px;
-    top:200px;
+  footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    text-align: justify;
+    font-size: 0.9vw;
+    padding: 0.5% 1%;
+    font-weight: lighter;
   }

@@ -1,0 +1,104 @@
+/* este código no fue usado
+
+.nav-container {
+    position: fixed;
+    left: 0;
+    top: 0px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+.nav {
+    margin: 0px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav a {
+    float: left;
+    display: inline-block;
+    margin: 0px 5px;
+    transition: background .25s ease-out;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    color: #f2f2f2;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: monospace;
+    opacity: 0.8;
+}
+
+.nav a:hover {
+    opacity: 1;
+    background-color: #ddd;
+    color: black
+}
+
+.nav a.active {
+    opacity: 1;
+    background-color: #04AA6D;
+    color: white;
+}
+
+*/
+
+
+
+
+
+/**********************/
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+
+    margin: 0px 5px;
+    transition: background .25s ease-out;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.8;
+
+
+  }
+  
+  #navbar a:hover {
+    opacity: 1;
+    background-color: #ddd;
+    color: black;
+  }
+  
+  #navbar a.active {
+    opacity: 1;
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  } 
+  
+  
