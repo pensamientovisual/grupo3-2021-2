@@ -27,13 +27,16 @@ for item in lista_final:
     pais = item.pop(0)
     list_pasajera.append(pais)
     dato = item.pop()
-    #dato_bueno = dato.replace("k", '00')
-    #dato_final = dato_bueno.replace('.', '')
+    # dato_bueno = dato.replace("k", '00')
+    # dato_final = dato_bueno.replace('.', '')
     list_pasajera.append(float(dato))
     list_primero_ultimo.append(list_pasajera)
     list_pasajera = []
 
 print(list_primero_ultimo)
+
+for i in list_primero_ultimo:
+    print(i[1])
 
 
 mayor = 0
