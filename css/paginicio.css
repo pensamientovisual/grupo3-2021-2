@@ -68,7 +68,7 @@ h3{
   padding-left: 15%;
   padding-right: 15%;
   padding-bottom: 0;
-  font-size: 1.4vw;       /*https://www.w3.org/TR/css3-values/#viewport-relative-lengths*/
+  font-size: 1.5vw;       /*https://www.w3.org/TR/css3-values/#viewport-relative-lengths*/
   font-weight: lighter;
 }
 h4{
