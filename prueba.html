@@ -41,7 +41,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/4_ThreeNum.csv", function(data) {
+d3.csv("CSVS/paises.csv", function(data) {
 
   // ---------------------------//
   //       AXIS  AND SCALE      //
@@ -49,7 +49,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
 
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([0, 45000])
+    .domain([0, 100000])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -60,11 +60,11 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
       .attr("text-anchor", "end")
       .attr("x", width)
       .attr("y", height+50 )
-      .text("Gdp per Capita");
+      .text("Human Development Index");
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([35, 90])
+    .domain([0.370, 0.954])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
@@ -74,7 +74,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
       .attr("text-anchor", "end")
       .attr("x", 0)
       .attr("y", -20 )
-      .text("Life expectancy")
+      .text("Income per person")
       .attr("text-anchor", "start")
 
   // Add a scale for bubble size
@@ -84,7 +84,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
 
   // Add a scale for bubble color
   var myColor = d3.scaleOrdinal()
-    .domain(["Asia", "Europe", "Americas", "Africa", "Oceania"])
+    .domain(["Norteamerica", "Centroamerica", "Sudamerica"])
     .range(d3.schemeSet1);
 
 
@@ -214,12 +214,12 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
     svg.append("text")
       .attr('x', xCircle)
       .attr("y", height - 100 +30)
-      .text("Population (M)")
+      .text("Happiness score")
       .attr("text-anchor", "middle")
 
     // Add one dot in the legend for each name.
     var size = 20
-    var allgroups = ["Asia", "Europe", "Americas", "Africa", "Oceania"]
+    var allgroups = ["Norteamerica", "Centroamerica", "Sudamerica"]
     svg.selectAll("myrect")
       .data(allgroups)
       .enter()
