@@ -10,7 +10,7 @@ var data = [
     {key: 'Costa Rica', value: 71.2, income: 20300, dh: 0.794},
     {key: 'Ecuador', value: 59.3, income: 11400, dh: 0.758},
     {key: 'El Salvador', value: 63.5, income: 8780, dh: 0.667},
-    {key: 'Estados Unidos', value: 69.4, income: 62500, dh: 0.92},
+    {key: 'United States', value: 69.4, income: 62500, dh: 0.92},
     {key: 'Guatemala', value: 64.0, income: 8640, dh: 0.651},
     {key: 'Haiti', value: 37.2, income: 2910, dh: 0.503},
     {key: 'Honduras', value: 59.5, income: 5730, dh: 0.623},
@@ -19,8 +19,8 @@ var data = [
     {key: 'Nicaragua', value: 61.4, income: 5410, dh: 0.651},
     {key: 'Panama', value: 63.0, income: 31500, dh: 0.795},
     {key: 'Paraguay', value: 56.9, income: 12700, dh: 0.724},
-    {key: 'Perú', value: 58.0, income: 12800, dh: 0.759},
-    {key: 'República Dominicana', value: 56.9, income: 18400, dh: 0.745},
+    {key: 'Peru', value: 58.0, income: 12800, dh: 0.759},
+    {key: 'Dominican Republic', value: 56.9, income: 18400, dh: 0.745},
     {key: 'Uruguay', value: 64.4, income: 21600, dh: 0.808},
     {key: 'Venezuela', value: 50.5, income: 8320, dh: 0.726}
 ];
@@ -50,7 +50,8 @@ var y = d3.scaleLinear()
 				.range([height, margin.top])
 
 var yAxis = d3.axisLeft().scale(y)
-        
+
+var paises = $(".pais")
 
 var svg = d3.select("body").append("svg")
             .attr("id", "chart")
@@ -69,17 +70,25 @@ var svg = d3.select("body").append("svg")
             .append("rect")
    					.attr("class","bar")
        			.on("mouseover",function(){
-      				d3.select(this)
-              	.attr("fill","red")
+              var idpais = $(this).attr("id")
+              if (this.key == idpais){
+                $('#'+idpais).fadeTo("fast", 0.5)
+                d3.select(this)
+                  .attr("fill","red")
+                }
     				}) 				
     				.on("mouseout",function(){
-      				d3.select(this)
+              var idpais = $(this).attr("id")
+              $('#'+idpais).fadeTo("fast", 1)
+              if (this.key == idpais){
+                d3.select(this)
               	.transition("colorfade")
 								.duration(250)
     						.attr("fill",function(d){
       						return "rgb(" + Math.round(d.value*2) + "," 
                 + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
-    				}) 
+    				    }
+            })
     
     				.attr("fill",function(d){
       				return "rgb(" + Math.round(d.value*2) + "," 
