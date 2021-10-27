@@ -16,51 +16,7 @@ body{
 }
 
 
-/* inicio codigo no usado*/
-
-.containerpi {
-    position: relative;
-    top:0;
-    width: 100%;
-    margin: 0 auto; /* Center it */
-  }
-
-.containerpi .content {
-    position: absolute;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1; /* Grey text */
-    width: 100%; /* Full width */
-    padding-top: 50px; /* Some padding */
-    height: 100%;
-  }
-
-.mapafondo{
-    fill: rgb(26, 25, 25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-}
-
-
-.text-block {  /* bloque de texto sin opacidad*/
-    position: absolute;
-    top: 100px;
-    right: 75px;
-    left: 75px;
-    align-items: center;
-    background-color: black;
-    color: white;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-
-/* fin codigo no usado*/
-
-
-
-.navbar{
+/*.navbar{
     display: inline-block;
     background: #00394f;
     color: #eee;
