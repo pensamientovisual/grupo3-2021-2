@@ -3,66 +3,66 @@
 <head>
    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
    <style>
-   * {
-     box-sizing: border-box;
-   }
-   
-   body {
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-size: 17px;
-     height: 100%;
-     margin:0;
-     background-size: cover;
-   }
-   
-   .container2 {
-     position: relative;
-     max-width: 100%;
-     margin: 0 auto;
-   }
-   
-   .container2 img {
-     vertical-align: middle;
-     height: 100%;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-   }
-   
-   .container2 .content {
-     position: absolute;
-     top: 0;
-     background: rgb(0, 0, 0); /* Fallback color */
-     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-     color: #f1f1f1;
-     width: 100%;
-     padding: 1%;
-     height: 100%;
-   }
+      * {
+         box-sizing: border-box;
+      }
 
-   .container2 .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #555;
-    color: white;
-    font-size: 1.5vw;
-    padding: 0.75% 1.5%;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-  }
+      body {
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         font-size: 17px;
+         height: 100%;
+         margin:0;
+         background-size: cover;
+      }
 
-.container2 .btn:hover {
-    background-color: black;
-  }
+      .container2 {
+         position: relative;
+         max-width: 100%;
+         margin: 0 auto;
+      }
 
-.container2 .boton{
-   padding:20%;
-}
+      .container2 img {
+         vertical-align: middle;
+         height: 100%;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+
+      .container2 .content {
+         position: absolute;
+         top: 0;
+         background: rgb(0, 0, 0); /* Fallback color */
+         background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+         color: #f1f1f1;
+         width: 100%;
+         padding: 1%;
+         height: 100%;
+      }
+
+      .container2 .btn {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         background-color: #555;
+         color: white;
+         font-size: 1.5vw;
+         padding: 0.75% 1.5%;
+         border: none;
+         cursor: pointer;
+         border-radius: 5px;
+         text-align: center;
+      }
+
+      .container2 .btn:hover {
+         background-color: black;
+      }
+
+      .container2 .boton{
+      padding:20%;
+      }
 
 .mapa_sec{
       margin: 1.5%;
@@ -102,6 +102,7 @@
     <script type="text/javascript" src="js/barras.js"></script>
     <script type="text/javascript" src="js/aplication.js"></script>
 
+
     <script src="https://d3js.org/d3.v4.js"></script>
 
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -134,14 +135,15 @@
    </div>
 
 
-   
+
+   <!--
    <div id="sec_mapa" class="mapa_sec">
       <div class="instruccion">
          Has click en un país del mapa y observa como se ilumina el gráfico de abajo, puedes comparar cuantos países quieras.
       </div>
    
    
-      <!--   <h1  class="titulo" >Índice de Felicidad Autopercibida</h1>
+         <h1  class="titulo" >Índice de Felicidad Autopercibida</h1>
          <div>
              <p id="p1">Este es el promedio nacional por país en respuesta a la pregunta "Imaginen una escalera con
                  escalones enumerados del 0 al inicio y 10 al final. El último escalón representa la mejor vida posible
@@ -150,11 +152,24 @@
          
       </div>-->  
    
-   
-   
 
-
-
+      <h1  class="titulo" >Índice de Felicidad Autopercibida</h1>
+      <div>
+          <pid="p1">Este es el promedio nacional por país en respuesta a la pregunta "Imaginen una escalera con
+              escalones enumerados del 0 al inicio y 10 al final. El último escalón representa la mejor vida posible
+              para ti y el primero representa la peor. ¿En qué escalón dirías que te encuentras parado en este 
+              punto de tu vida?". Se convirtió en una escala del 0 al 100, solo por temas de representación en porcentaje (WHR, 2018). [Colocar fuente] </p>
+         <p>Pasa el mouse por sobre un país del mapa y observa como se ilumina el gráfico y muestra información</p>
+      
+      </div>
+      
+      <div>
+         <p id="info_pais">Información de paises</p>
+         <p id="info_pais1"> </p>
+         <p id="info_pais2"> </p>
+         <p id="info_pais3"> </p>
+         <p id="prueba"></p>
+      </div>
 
 
    <div class="mapa_izq" id="mapa_izq">
