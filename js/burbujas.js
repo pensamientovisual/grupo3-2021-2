@@ -1,17 +1,16 @@
-<!-- Code from d3-graph-gallery.com -->
+/*<!-- Code from d3-graph-gallery.com
 <!DOCTYPE html>
 <meta charset="utf-8">
-
-<!-- Load d3.js -->
+Load d3.js
 <script src="https://d3js.org/d3.v4.js"></script>
 
-<!-- Load color scale -->
+ Load color scale 
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
-<!-- Create a div where the graph will take place -->
+<!-- Create a div where the graph will take place
 <div id="my_dataviz"></div>
 
-<!-- A bit of CSS: change stroke color of circle on hover (white -> black) -->
+<!-- A bit of CSS: change stroke color of circle on hover (white -> black)
 <style>
 .bubbles {
   stroke-width: 1px;
@@ -24,7 +23,10 @@
 </style>
 
 
-<script>
+<script> -->*/
+
+
+
 
 // set the dimensions and margins of the graph
 var margin = {top: 40, right: 150, bottom: 60, left: 30},
@@ -49,7 +51,7 @@ d3.csv("CSVS/paises.csv", function(data) {
 
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([0, 45000])
+    .domain([0.4, 1])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -64,7 +66,7 @@ d3.csv("CSVS/paises.csv", function(data) {
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([35, 90])
+    .domain([35, 65000])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
@@ -84,7 +86,7 @@ d3.csv("CSVS/paises.csv", function(data) {
 
   // Add a scale for bubble color
   var myColor = d3.scaleOrdinal()
-    .domain(["Asia", "Europe", "Americas", "Africa", "Oceania"])
+    .domain(["Sudamerica", "Centroamerica", "Norteamerica"])
     .range(d3.schemeSet1);
 
 
@@ -219,7 +221,7 @@ d3.csv("CSVS/paises.csv", function(data) {
 
     // Add one dot in the legend for each name.
     var size = 20
-    var allgroups = ["Asia", "Europe", "Americas", "Africa", "Oceania"]
+    var allgroups = ["Sudamerica", "Centroamerica", "Norteamerica"]
     svg.selectAll("myrect")
       .data(allgroups)
       .enter()
@@ -245,4 +247,3 @@ d3.csv("CSVS/paises.csv", function(data) {
         .on("mouseover", highlight)
         .on("mouseleave", noHighlight)
   })
-</script>

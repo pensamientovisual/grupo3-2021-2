@@ -64,6 +64,23 @@
    padding:20%;
 }
 
+.mapa_sec{
+      margin: 1.5%;
+      text-align: center;
+  }
+
+  .mapa_sec .instruccion{
+      position: relative;
+    font-size: 1.5vw;
+    left: 50%;
+    top: 20vw;
+    width: 45%;
+    border-style: none;
+    border-radius: 5px;
+    padding: 2.5vw 2vw;
+    background: rgba(0, 0, 0, 0.25); 
+    color: white;
+   }
 
    </style>
 
@@ -73,13 +90,21 @@
     <link type="text/css" href="css/estilo.css" rel="stylesheet"/>
     <link type="text/css" href="css/paginicio.css" rel="stylesheet"/>
     <link type="text/css" href="css/nav.css" rel="stylesheet"/>
+    <link type="text/css" href="css/grafico-barras.css" rel="stylesheet"/>
+    <link type="text/css" href="css/burbujas.css" rel="stylesheet"/>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.1.1/d3.min.js" integrity="sha512-COTaPOlz12cG4fSfcBsxZsjauBAyldqp+8FQUM/dZHm+ts/jR4AFoJhCqxy8K10Jrf3pojfsbq7fAPTb1XaVkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js" defer></script>
+    <script src="https://d3js.org/d3.v6.min.js" defer></script>
     <script type="text/javascript" src="js/barras.js"></script>
     <script type="text/javascript" src="js/aplication.js"></script>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
 </head>
 <body>
@@ -108,17 +133,30 @@
       </div>
    </div>
 
-<div id="sec_mapa">
 
-      <h1  class="titulo" >Índice de Felicidad Autopercibida</h1>
-      <div>
-          <pid="p1">Este es el promedio nacional por país en respuesta a la pregunta "Imaginen una escalera con
-              escalones enumerados del 0 al inicio y 10 al final. El último escalón representa la mejor vida posible
-              para ti y el primero representa la peor. ¿En qué escalón dirías que te encuentras parado en este 
-              punto de tu vida?". Se convirtió en una escala del 0 al 100, solo por temas de representación en porcentaje (WHR, 2018). [Colocar fuente] </p>
-         <p>Has click en un país del mapa y observa como se ilumina el gráfico, puedes comparar cuantos países quieras.</p>
-      
-   </div>
+   
+   <div id="sec_mapa" class="mapa_sec">
+      <div class="instruccion">
+         Has click en un país del mapa y observa como se ilumina el gráfico de abajo, puedes comparar cuantos países quieras.
+      </div>
+   
+   
+      <!--   <h1  class="titulo" >Índice de Felicidad Autopercibida</h1>
+         <div>
+             <p id="p1">Este es el promedio nacional por país en respuesta a la pregunta "Imaginen una escalera con
+                 escalones enumerados del 0 al inicio y 10 al final. El último escalón representa la mejor vida posible
+                 para ti y el primero representa la peor. ¿En qué escalón dirías que te encuentras parado en este 
+                 punto de tu vida?". Se convirtió en una escala del 0 al 100, solo por temas de representación en porcentaje (WHR, 2018). </p>
+         
+      </div>-->  
+   
+   
+   
+
+
+
+
+
    <div class="mapa_izq" id="mapa_izq">
       <svg
  xmlns:mapsvg="http://mapsvg.com"
@@ -717,36 +755,46 @@
   </div>
 </div>
 
+
+<footer>
+   Fuente Información: <a href=https://www.gapminder.org/data/ >Gapminder Foundation</a>
+</footer>
+
 <script src="https://d3js.org/d3.v5.min.js" defer></script>
 <!-- <script src="js/index.js" defer></script>  NO SE ESTA USANDO INDEX.JS -->
 <script src="js/navbar.js" defer></script>
-<div id="sec_conclusiones">
-   <button id="byKey"> Orden Alfabético</button>
-   <button id="byValue"> Mayor a menor índice de felicidad</button>
-   <button id="byincome">Mayor a menor PIB</button>
-   <button id="bydh">Mayor a menor índice de desarrollo humano</button>
+<div id="sec_conclusiones" class="gboton">
+   <button class="btng" id="byKey"> Orden Alfabético</button>
+   <button class="btng" id="byValue"> Mayor a menor índice de felicidad</button>
+   <button class="btng" id="byincome">Mayor a menor PIB</button>
+   <button class="btng" id="bydh">Mayor a menor índice de desarrollo humano</button>
    <br>
 </div>
 <div><script src="js/barras.js"></script></div>
 </div>
-<div id="sec_conclusiones1">
+<!-- <div id="sec_conclusiones1">
    <button id="byKey1"> Orden Alfabético</button>
    <button id="byValue1"> Mayor a menor PIB</button>
    <button id="byincome1">Mayor a menor felicidad</button>
    <button id="bydh1">Mayor a menor índice de desarrollo humano</button>
    <br>
-</div>
+</div> -->
 <div><script src="js/barras_income.js" ></script></div>
-<div id="sec_conclusiones2">
+<!-- <div id="sec_conclusiones2">
    <button id="peo"> Orden Alfabético</button>
    <button id="byValue2"> Mayor a menor índice de desarrollo humano</button>
    <button id="byincome2">Mayor a menor PIB</button>
    <button id="bydh2">Mayor a menor felicidad</button>
    <br>
-</div>   
+</div>   -->
 <div><script src="js/barras_dh.js"></script></div>
    
    
+<div id="my_dataviz">
+   <script src="js/burbujas.js">
+   
+   </script></div>
+
    
 </body>
 </html>
