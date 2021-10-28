@@ -177,8 +177,8 @@
    <div >
       <div id="navbar">
          <a  href="#sec_inicio"  href="javascript:void(0)">Inicio</a>
-         <a  href="#sec_mapa" href="javascript:void(0)">Mapa y Gráficos</a>
-         <a  href="#sec_conclusiones" href="javascript:void(0)">Más Información</a>
+         <a  href="#sec_mapa" href="javascript:void(0)">Mapa</a>
+         <a  href="#sec_conclusiones" href="javascript:void(0)"> Gráfico</a>
       </div>
    </div>
 
@@ -190,20 +190,42 @@
              </script>
           </div> -->
     
-    
-          <div class="instruccion2">
-             Pasa el cursor sobre un país del mapa y averigua la información de cada uno. Los países en gris no tienen información.
-          </div>
+   
     
     
-          <h1  class="titulo" >Índice de Felicidad Autopercibida</h1>
-             <div>
-                 <p id="p1">Este es el promedio nacional por país en respuesta a la pregunta "Imaginen una escalera con
+          <h1  class="titulo" >¿Qué afecta tu felicidad?</h1>
+
+
+
+             <div style="text-align: justify; margin-left:5%; margin-right:5%;margin-top:1.5%;">
+
+<p id="p1">Índice de la felicidad autopercibida: es el promedio nacional por país en respuesta a la pregunta "Imaginen una escalera con
                      escalones enumerados del 0 al inicio y 10 al final. El último escalón representa la mejor vida posible
                      para ti y el primero representa la peor. ¿En qué escalón dirías que te encuentras parado en este 
                      punto de tu vida?". Se convirtió en una escala del 0 al 100, solo por temas de representación en porcentaje (WHR, 2018). </p>
+                  <p>
+                     PIB:
+El PIB es el valor total de los bienes y servicios finales producidos por un país, durante un tiempo definido.
+(http://www.2006-2012.economia.gob.mx/economia-para-todos/tema-del-dia/6950-para-que-sirve-el-pib)
+Se presenta el Producto interno bruto por persona ajustado por diferencias de poder adquisitivo (en dólares internacionales).
+Este se calcula como la suma del consumo realizado por los hogares (C), la inversión (I), el gasto realizado por el gobierno (G) 
+y las exportaciones netas (X-M).
+                  </p>
+                  <p>
+                     Desarrollo Humano:
+El índice de desarrollo humano es un índice que se utiliza para clasificar los países. por nivel de "desarrollo humano". Contiene 
+tres dimensiones: nivel de salud, nivel de educación y estándares de vida.
+El IDH es la media geométrica de las tres dimensiones anteriores, cuyos índices se calculan por separado con los datos de esperanza
+de vida, escolarización y renta per cápita de cada país. El resultado final arroja siempre un valor entre 0 y 1. 
+                  </p>
     
           </div>
+
+          <h1  style="margin-top: 5%; margin-bottom: -4vw;" class="subtitulo" >MAPA</h1>
+
+          <div class="instruccion2">
+            Pasa el cursor sobre un país y descubre su información
+         </div>
     
     <div id="sec_mapa" class="mapa_sec">
        <div id="information" class="instruccion">
@@ -810,6 +832,12 @@
   </div>
 </div>
 
+<div id="sec_conclusiones">
+
+   <h1 style="margin-top: 5%;" class="subtitulo" >GRÁFICO</h1>
+
+
+<p class="final">Las barras representan el índice de la felicidad. Prueba ordenarlo de distintas maneras. </p>
 
 <footer>
    Fuente Información: <a href=https://www.gapminder.org/data/ >Gapminder Foundation</a>
@@ -826,7 +854,7 @@
    <br>
 </div>
    <div><script src="js/barras.js"></script></div>
-   <p>El tamaño de las barras representa el valor de la felicidad promedio en el país</p>
+   
 </div>
 <!-- <div id="sec_conclusiones1">
    <button id="byKey1"> Orden Alfabético</button>
@@ -851,6 +879,9 @@
    
    </script></div> -->
 
-   
+</div>
+
+<p style=" bottom: 0;">¿Es lo que te esperabas?</p>
+
 </body>
 </html>

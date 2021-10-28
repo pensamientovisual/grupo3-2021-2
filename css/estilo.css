@@ -59,8 +59,11 @@ nav {
     background-color: #f67711;
     border-radius: 5px;
     text-align: center;
-    margin: left;
-    top: 70px;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    margin-top: 1.5%;
+    font-size: 1.8vw;
+    padding: 0.8%;
 }
 
 .descripcion{
@@ -183,3 +186,22 @@ nav {
   footer a{
     color: #f1f1f1;
   }
+
+  .instruccion2{
+  position: relative;
+  background-color: rgb(100, 99, 99);
+  color: white;
+  font-size: 1.5vw;
+  padding: 0.75% 1.5%;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  top:22vw;
+  left:6%;
+  width: 20%;
+}
+
+
+#sec_conclusiones{
+    text-align:center;
+}
