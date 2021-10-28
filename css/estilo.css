@@ -162,14 +162,32 @@ nav {
 
 
   footer {
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
-    text-align: justify;
-    font-size: 0.9vw;
-    padding: 0.5% 1%;
+    text-align: right;
+    font-size: 0.7vw;
+    padding: 0.4% 1%;
     font-weight: lighter;
   }
+
+  footer a{
+    color: #f1f1f1;
+  }
+
+
+/*  #sec_mapa{
+      margin: 1.5%;
+      text-align: center;
+  }
+
+  #sec_mapa .instruccion{
+      position: relative;
+    font-size: 1.5vw;
+    left: 40%;
+    top: 10vw;
+    max-width: 100%;
+  } */

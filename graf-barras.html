@@ -1,6 +1,33 @@
-// https://bl.ocks.org/anonymous/bc5a9691a3417b403d4e8ade3297afa3/3a2434c1c2849e476791e581754ec27e055db4d6
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
 
 
+  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+      </script>
+  <style>
+    .bodyg { margin:20%;position:fixed;top:10%; }
+    .bar {  }
+    
+  </style>
+</head>
+
+<body>
+    <div id="sec_conclusiones" class="gboton">
+   <div style="display: inline-block; ">
+   <button class="btng" id="byKey"> Orden Alfabético</button>
+   <button class="btng" id="byValue"> Mayor a menor índice de felicidad</button>
+   <button class="btng" id="byincome">Mayor a menor PIB</button>
+   <button class="btng" id="bydh">Mayor a menor índice de desarrollo humano</button>
+</div>
+</div>
+    <br>
+  <script class="bodyg">
 
 var data = [
     {key: 'Argentina', value: 59.7, income: 22100, dh: 0.83},
@@ -32,8 +59,8 @@ var h = $(window).height();
 var margin = {
     top: 50,
     bottom: 100,
-    left: $(window).width()/3 +200,
-    right: -$(window).width() +200
+    left: $(window).width()/10,
+    right: -$(window).width()*4/5
 };
 var width = (w - 30 - margin.right)/2;
 var height = (h - margin.top - margin.bottom)/2;
@@ -150,130 +177,131 @@ var svg = d3.select("body").append("svg")
     				 
       			.attr("text-anchor","left")
     				.text(function(d){return d.key})
-    
+
+//aca empiezan los botones
+d3.select("#byKey").on("click", function() {
 
 
-
-
-
-            //aca empiezan los botones
-    d3.select("#byKey").on("click", function() {
-
-
-  data.sort(function(a, b,c) {
-    return d3.ascending(a.key, b.key)
+data.sort(function(a, b,c) {
+  return d3.ascending(a.key, b.key)
+})
+x.domain(data.map(function(d) {
+  return d.key;
+}));
+svg.selectAll(".bar")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key);
   })
-  x.domain(data.map(function(d) {
-    return d.key;
-  }));
-  svg.selectAll(".bar")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key);
-    })
 
-  svg.selectAll(".val-label")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key) + x.bandwidth() / 2;
-    })
+svg.selectAll(".val-label")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key) + x.bandwidth() / 2;
+  })
 
-  svg.selectAll(".bar-label")
-    .transition()
-    .duration(500)
-    .attr("transform", function(d, i) {
-      return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
-    })
+svg.selectAll(".bar-label")
+  .transition()
+  .duration(500)
+  .attr("transform", function(d, i) {
+    return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
+  })
 
 })
 
 d3.select("#byValue").on("click", function() {
-  data.sort(function(a, b,c) {
-    return d3.descending(a.value, b.value)
+data.sort(function(a, b,c) {
+  return d3.descending(a.value, b.value)
+})
+x.domain(data.map(function(d) {
+  return d.key;
+}));
+svg.selectAll(".bar")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key);
   })
-  x.domain(data.map(function(d) {
-    return d.key;
-  }));
-  svg.selectAll(".bar")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key);
-    })
 
-  svg.selectAll(".val-label")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key) + x.bandwidth() / 2;
-    })
+svg.selectAll(".val-label")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key) + x.bandwidth() / 2;
+  })
 
-  svg.selectAll(".bar-label")
-    .transition()
-    .duration(500)
-    .attr("transform", function(d, i) {
-      return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
-    })
+svg.selectAll(".bar-label")
+  .transition()
+  .duration(500)
+  .attr("transform", function(d, i) {
+    return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
+  })
 })
 
 
 d3.select("#byincome").on("click", function() {
-  data.sort(function(a, b,c) {
-    return d3.descending(a.income, b.income)
+data.sort(function(a, b,c) {
+  return d3.descending(a.income, b.income)
+})
+x.domain(data.map(function(d) {
+  return d.key;
+}));
+svg.selectAll(".bar")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key);
   })
-  x.domain(data.map(function(d) {
-    return d.key;
-  }));
-  svg.selectAll(".bar")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key);
-    })
 
-  svg.selectAll(".val-label")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key) + x.bandwidth() / 2;
-    })
+svg.selectAll(".val-label")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key) + x.bandwidth() / 2;
+  })
 
-  svg.selectAll(".bar-label")
-    .transition()
-    .duration(500)
-    .attr("transform", function(d, i) {
-      return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
-    })
+svg.selectAll(".bar-label")
+  .transition()
+  .duration(500)
+  .attr("transform", function(d, i) {
+    return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
+  })
 })
 
 
 d3.select("#bydh").on("click", function() {
-  data.sort(function(a, b,c,d) {
-    return d3.descending(a.dh, b.dh)
-  })
-  x.domain(data.map(function(d) {
-    return d.key;
-  }));
-  svg.selectAll(".bar")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key);
-    })
-
-  svg.selectAll(".val-label")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key) + x.bandwidth() / 2;
-    })
-
-  svg.selectAll(".bar-label")
-    .transition()
-    .duration(500)
-    .attr("transform", function(d, i) {
-      return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
-    })
+data.sort(function(a, b,c,d) {
+  return d3.descending(a.dh, b.dh)
 })
+x.domain(data.map(function(d) {
+  return d.key;
+}));
+svg.selectAll(".bar")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key);
+  })
+
+svg.selectAll(".val-label")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key) + x.bandwidth() / 2;
+  })
+
+svg.selectAll(".bar-label")
+  .transition()
+  .duration(500)
+  .attr("transform", function(d, i) {
+    return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
+  })
+})
+
+
+
+
+  </script>
+</body>
