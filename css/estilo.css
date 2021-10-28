@@ -1,6 +1,17 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #01171b;;
+    background: #01171b;
+}
+
+.container{
+    padding: 5%;
+    text-align: center;
+    width: 80%;
+}
+
+#mapa_izq, #mapa_der {
+    display: inline-block;    
+    padding: 2%;   
 }
 
 .navbar{
@@ -11,40 +22,56 @@ body{
     text-decoration: none;
     position: relative;
     margin-top: auto;
+    font-weight: bold;
+}
+
+.navbar .navbar.active{
+    background:rgb(52, 87, 52);
+}
+
+.navpos{
+    z-index: 1030;
+    position: fixed;    
 }
 
 .navbar:hover{
     background: #006284;
 }
 
-nav{
+nav {
     background: #365b77;
 }
 
-.titulo{
+.proyecto{
     width: 500px;
     position: relative;
-    left: 200px;
+    left: 500px;
+    color: ghostwhite;
+    text-align: center;
+    top: 20px;  
+}
+
+.titulo{
     color: ghostwhite;
     background-color: rgb(52, 87, 52);
     border-radius: 5px;
     text-align: center;
+    margin: left;
+    top: 70px;
 }
 
 .descripcion{
     font-size: 20px;
     color: ghostwhite;
-    width: 900px;
-    position: relative;
-    left: 30px;
+    margin: left;
     text-align: justify;
+    top:90px;
 }
 
 .mapa_izq{
-    position: relative;
-    left: 30px;
-    width: 30%;
-    margin: left;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
 }
 
 .mapa_izq path{
@@ -54,10 +81,9 @@ nav{
 
 .mapa_der{
     position: relative;
-    left: 990px;
-    top: -815px;
-    width: 30%;
-    margin: right;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
 }
 
 .mapa_der path{
@@ -65,11 +91,20 @@ nav{
     stroke-width: 1px;
 }
 
-.titulo1{
-    width: 500px;
+.mapa_nuevo{
     position: relative;
-    left: 1140px;
-    top: -868px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.mapa_nuevo path{
+    stroke: #eee;
+    stroke-width: 1px;
+}
+
+.titulo1{
+    position: relative;
     color: ghostwhite;
     background-color: rgb(52, 87, 52);
     border-radius: 5px;
@@ -78,11 +113,40 @@ nav{
 .descripcion1{
     font-size: 20px;
     color: ghostwhite;
-    width: 600px;
-    position: relative;
-    left: 970px;
-    top: -868px;
     text-align: justify;
 }
 
-
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
