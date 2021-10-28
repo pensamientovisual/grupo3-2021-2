@@ -121,7 +121,7 @@ nav {
 .titulo1{
     position: relative;
     color: ghostwhite;
-    background-color: rgb(52, 87, 52);
+    background-color: rgb(245, 111, 22);
     border-radius: 5px;
     text-align: center;
 }
@@ -166,7 +166,7 @@ nav {
   
   .dropdown:hover .dropbtn {background-color: #f67711;}
 
-
+  
   footer {
     position: fixed;
     left: 0;

@@ -1,0 +1,32 @@
+colores
+["#db6800", "#90af3f", "#eb7c00", "#e38300", "#78b764", "#d48e00", "#cc9300", "#c49800", "#bc9c00", "#b5a004", "#ada315", "#a6a721, 
+9eaa2c", "#97ac35", "#f37500", "#8ab149", "#83b352", "#7db55b", "#fa6d06", "#72b86d", "#6dba76", "#69bb7e"]
+
+Paises
+["Argentina", "Bolivia", "Brazil", "Canada", "Chile", "Colombia", "Costa Rica", "Dominican Republic", "Ecuador", "El Salvador",
+ "Guatemala", "Haiti", "Honduras", "Jamaica", "Mexico", "Nicaragua", "Panama", "Paraguay", "Peru", "United States", "Uruguay", "Venezuela"]
+
+Descripciones
+
+Felicidad:
+Este es el promedio nacional por país en respuesta a la pregunta "Imaginen una escalera con
+escalones enumerados del 0 al inicio y 10 al final. El último escalón representa la mejor vida posible
+para ti y el primero representa la peor. ¿En qué escalón dirías que te encuentras parado en este 
+punto de tu vida?". Se convirtió en una escala del 0 al 100, solo por temas de representación en porcentaje (WHR, 2018).
+
+PIB:
+El PIB es el valor total de los bienes y servicios finales producidos por un país, durante un tiempo definido.
+(http://www.2006-2012.economia.gob.mx/economia-para-todos/tema-del-dia/6950-para-que-sirve-el-pib)
+Se presenta el Producto interno bruto por persona ajustado por diferencias de poder adquisitivo (en dólares internacionales).
+Este se calcula como la suma del consumo realizado por los hogares (C), la inversión (I), el gasto realizado por el gobierno (G) 
+y las exportaciones netas (X-M).
+(https://si3.bcentral.cl/estadisticas/Principal1/enlaces/aplicaciones/MODULO_1_CNT_SREBORA.pdf)
+
+Desarrollo Humano:
+El índice de desarrollo humano es un índice que se utiliza para clasificar los países. por nivel de "desarrollo humano". Contiene 
+tres dimensiones: nivel de salud, nivel de educación y estándares de vida.
+El IDH es la media geométrica de las tres dimensiones anteriores, cuyos índices se calculan por separado con los datos de esperanza
+de vida, escolarización y renta per cápita de cada país. El resultado final arroja siempre un valor entre 0 y 1. 
+(https://www.iberdrola.com/compromiso-social/indice-desarrollo-humano#:~:text=QU%C3%89%20MIDE%20EL%20IDH&text=Se%20eval%C3%BAa%20a%20trav%C3%A9s%20de,y%20una%20m%C3%A1xima%20de%2085.)
+
+Conclusion:

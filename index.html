@@ -3,17 +3,60 @@
 <head>
    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
    <style>
-      * {
-         box-sizing: border-box;
-      }
 
-      body {
-         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-         font-size: 17px;
-         height: 100%;
-         margin:0;
-         background-size: cover;
-      }
+   * {
+     box-sizing: border-box;
+   }
+   
+   body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 17px;
+     height: 100%;
+     margin:0;
+     background-size: cover;
+   }
+   
+   .container2 {
+     position: relative;
+     max-width: 100%;
+     margin: 0 auto;
+     text-align: center;
+   }
+   
+   .container2 img {
+     vertical-align: middle;
+     height: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
+   
+   .container2 .content {
+     position: absolute;
+     top: 0;
+     background: rgb(0, 0, 0); /* Fallback color */
+     background: rgba(0, 0, 0, 0.4); /* Black background with 0.5 opacity */
+     color: #f1f1f1;
+     width: 100%;
+     padding: 1%;
+     height: 100%;
+   }
+
+   .container2 .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(100, 99, 99);
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.75% 1.5%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
 
       .container2 {
          position: relative;
@@ -114,7 +157,7 @@
 
 
    <div id="sec_inicio" class="container2">
-      <img src="mapa-svg/america_png.png" alt="Notebook" style="width:40%;" class="img_mapa">   
+      <img src="mapa-svg/america_png.png" alt="Notebook" style="width:38%;">   
          <div class="content">
             <h2 id="sec_inicio"> ¿ES AMÉRICA UN CONTINENTE FELIZ?</h2>
             <h3>Este proyecto busca relacionar el desarrollo humano y los ingresos de los países de América con el índice de felicidad autopercibida de cada país.</h3>
@@ -784,6 +827,13 @@
    <button id="bydh2">Mayor a menor felicidad</button>
    <br>
 </div>   -->
+
+   
+   
+<!-- <div id="my_dataviz">
+   <script src="js/burbujas.js">
+   
+   </script></div> -->
 
    
 </body>

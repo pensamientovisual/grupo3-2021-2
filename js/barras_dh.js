@@ -81,15 +81,11 @@ var height = (h - margin.top - margin.bottom)/2;
                   d3.select(this)
                     .transition("colorfade")
                                   .duration(250)
-                              .attr("fill",function(d){
-                                return "rgb(" + Math.round(d.value*2) + "," 
-                  + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
+                              .attr("fill", "#90af3f")
                           
               })
       
-                      .attr("fill",function(d){
-                        return "rgb(" + Math.round(d.value*2) + "," 
-                  + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
+                      .attr("fill","#90af3f")
                           
               .attr("x", function(d,i){
                  return x(d.key);
