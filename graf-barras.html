@@ -1,6 +1,36 @@
-// https://bl.ocks.org/anonymous/bc5a9691a3417b403d4e8ade3297afa3/3a2434c1c2849e476791e581754ec27e055db4d6
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
 
 
+  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+      </script>
+  <style>
+    .bodyg { margin:20%;position:fixed;top:10%; }
+    .bar {  }
+    
+  </style>
+</head>
+
+<body>
+    <div id="sec_conclusiones" class="gboton">
+   <div style="display: inline-block; ">
+   <button class="btng" id="byKey"> Orden Alfabético</button>
+   <button class="btng" id="byValue"> Mayor a menor índice de felicidad</button>
+   <button class="btng" id="byincome">Mayor a menor PIB</button>
+   <button class="btng" id="bydh">Mayor a menor índice de desarrollo humano</button>
+</div>
+</div>
+    <br>
+
+
+
+  <script class="bodyg">
 
 var data = [
     {key: 'Argentina', value: 59.7, income: 22100, dh: 0.83},
@@ -12,7 +42,7 @@ var data = [
     {key: 'Costa Rica', value: 71.2, income: 20300, dh: 0.794},
     {key: 'Ecuador', value: 59.3, income: 11400, dh: 0.758},
     {key: 'El Salvador', value: 63.5, income: 8780, dh: 0.667},
-    {key: 'United States', value: 69.4, income: 62500, dh: 0.92},
+    {key: 'Estados Unidos', value: 69.4, income: 62500, dh: 0.92},
     {key: 'Guatemala', value: 64.0, income: 8640, dh: 0.651},
     {key: 'Haití', value: 37.2, income: 2910, dh: 0.503},
     {key: 'Honduras', value: 59.5, income: 5730, dh: 0.623},
@@ -21,21 +51,19 @@ var data = [
     {key: 'Nicaragua', value: 61.4, income: 5410, dh: 0.651},
     {key: 'Panamá', value: 63.0, income: 31500, dh: 0.795},
     {key: 'Paraguay', value: 56.9, income: 12700, dh: 0.724},
-    {key: 'Peru', value: 58.0, income: 12800, dh: 0.759},
-    {key: 'Dominican Republic', value: 56.9, income: 18400, dh: 0.745},
+    {key: 'Perú', value: 58.0, income: 12800, dh: 0.759},
+    {key: 'República Dominicana', value: 56.9, income: 18400, dh: 0.745},
     {key: 'Uruguay', value: 64.4, income: 21600, dh: 0.808},
     {key: 'Venezuela', value: 50.5, income: 8320, dh: 0.726}
 ];
-
-
     
 var w = $(window).width();
 var h = $(window).height();
 var margin = {
     top: 50,
     bottom: 100,
-    left: $(window).width()/3 +200,
-    right: -$(window).width() +200
+    left: $(window).width()/10,
+    right: -$(window).width()*4/5
 };
 var width = (w - 30 - margin.right)/2;
 var height = (h - margin.top - margin.bottom)/2;
@@ -54,8 +82,7 @@ var y = d3.scaleLinear()
 				.range([height, margin.top])
 
 var yAxis = d3.axisLeft().scale(y)
-
-var paises = $(".pais")
+        
 
 var svg = d3.select("body").append("svg")
             .attr("id", "chart")
@@ -74,34 +101,21 @@ var svg = d3.select("body").append("svg")
             .append("rect")
    					.attr("class","bar")
        			.on("mouseover",function(){
-              var idpais = $(this).attr("id")
-              if (this.key == idpais){
-                $('#'+idpais).fadeTo("fast", 0.5)
-                d3.select(this)
-                  .attr("fill","red")
-                }
+      				d3.select(this)
+              	.attr("fill","red")
     				}) 				
     				.on("mouseout",function(){
-              var idpais = $(this).attr("id")
-              $('#'+idpais).fadeTo("fast", 1)
-              if (this.key == idpais){
-                d3.select(this)
+      				d3.select(this)
               	.transition("colorfade")
 								.duration(25)
-    						/*.attr("fill",function(d){
+    						.attr("fill",function(d){
       						return "rgb(" + Math.round(d.value*2) + "," 
-
                 + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";}) // aqui cambiar los colores
     				}) 
-
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
-    				    }
-            })*/
-
     
     				.attr("fill",function(d){
       				return "rgb(" + Math.round(d.value*2) + "," 
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})  //aqui cambiar los colores 
+                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})  //aqui cambiar los colores
     				    
             .attr("x", function(d,i){
                return x(d.key);
@@ -166,130 +180,133 @@ var svg = d3.select("body").append("svg")
     				 
       			.attr("text-anchor","left")
     				.text(function(d){return d.key})
-    
+
+//aca empiezan los botones
+d3.select("#byKey").on("click", function() {
 
 
-
-
-
-            //aca empiezan los botones
-    d3.select("#byKey").on("click", function() {
-
-
-  data.sort(function(a, b,c) {
-    return d3.ascending(a.key, b.key)
+data.sort(function(a, b,c) {
+  return d3.ascending(a.key, b.key)
+})
+x.domain(data.map(function(d) {
+  return d.key;
+}));
+svg.selectAll(".bar")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key);
   })
-  x.domain(data.map(function(d) {
-    return d.key;
-  }));
-  svg.selectAll(".bar")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key);
-    })
 
-  svg.selectAll(".val-label")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key) + x.bandwidth() / 2;
-    })
+svg.selectAll(".val-label")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key) + x.bandwidth() / 2;
+  })
 
-  svg.selectAll(".bar-label")
-    .transition()
-    .duration(500)
-    .attr("transform", function(d, i) {
-      return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
-    })
+svg.selectAll(".bar-label")
+  .transition()
+  .duration(500)
+  .attr("transform", function(d, i) {
+    return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
+  })
 
 })
 
 d3.select("#byValue").on("click", function() {
-  data.sort(function(a, b,c) {
-    return d3.descending(a.value, b.value)
+data.sort(function(a, b,c) {
+  return d3.descending(a.value, b.value)
+})
+x.domain(data.map(function(d) {
+  return d.key;
+}));
+svg.selectAll(".bar")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key);
   })
-  x.domain(data.map(function(d) {
-    return d.key;
-  }));
-  svg.selectAll(".bar")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key);
-    })
 
-  svg.selectAll(".val-label")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key) + x.bandwidth() / 2;
-    })
+svg.selectAll(".val-label")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key) + x.bandwidth() / 2;
+  })
 
-  svg.selectAll(".bar-label")
-    .transition()
-    .duration(500)
-    .attr("transform", function(d, i) {
-      return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
-    })
+svg.selectAll(".bar-label")
+  .transition()
+  .duration(500)
+  .attr("transform", function(d, i) {
+    return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
+  })
 })
 
 
 d3.select("#byincome").on("click", function() {
-  data.sort(function(a, b,c) {
-    return d3.descending(a.income, b.income)
+data.sort(function(a, b,c) {
+  return d3.descending(a.income, b.income)
+})
+x.domain(data.map(function(d) {
+  return d.key;
+}));
+svg.selectAll(".bar")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key);
   })
-  x.domain(data.map(function(d) {
-    return d.key;
-  }));
-  svg.selectAll(".bar")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key);
-    })
 
-  svg.selectAll(".val-label")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key) + x.bandwidth() / 2;
-    })
+svg.selectAll(".val-label")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key) + x.bandwidth() / 2;
+  })
 
-  svg.selectAll(".bar-label")
-    .transition()
-    .duration(500)
-    .attr("transform", function(d, i) {
-      return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
-    })
+svg.selectAll(".bar-label")
+  .transition()
+  .duration(500)
+  .attr("transform", function(d, i) {
+    return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
+  })
 })
 
 
 d3.select("#bydh").on("click", function() {
-  data.sort(function(a, b,c,d) {
-    return d3.descending(a.dh, b.dh)
-  })
-  x.domain(data.map(function(d) {
-    return d.key;
-  }));
-  svg.selectAll(".bar")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key);
-    })
-
-  svg.selectAll(".val-label")
-    .transition()
-    .duration(500)
-    .attr("x", function(d, i) {
-      return x(d.key) + x.bandwidth() / 2;
-    })
-
-  svg.selectAll(".bar-label")
-    .transition()
-    .duration(500)
-    .attr("transform", function(d, i) {
-      return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
-    })
+data.sort(function(a, b,c,d) {
+  return d3.descending(a.dh, b.dh)
 })
+x.domain(data.map(function(d) {
+  return d.key;
+}));
+svg.selectAll(".bar")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key);
+  })
+
+svg.selectAll(".val-label")
+  .transition()
+  .duration(500)
+  .attr("x", function(d, i) {
+    return x(d.key) + x.bandwidth() / 2;
+  })
+
+svg.selectAll(".bar-label")
+  .transition()
+  .duration(500)
+  .attr("transform", function(d, i) {
+    return "translate(" + (x(d.key) + x.bandwidth() / 2 - 8) + "," + (height + 15) + ")" + " rotate(45)"
+  })
+})
+
+
+
+
+  </script>
+
+
+</body>
