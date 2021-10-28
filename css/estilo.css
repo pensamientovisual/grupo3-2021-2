@@ -82,6 +82,18 @@ nav {
     margin: auto;
 }
 
+#sec_mapa {
+    width: 100%;
+    margin: auto;
+}
+
+#information {
+    width: fit-content;
+    float: left;
+    height: fit-content;
+    margin: auto;
+}
+
 .mapa_izq path{
     stroke: #eee;
     stroke-width: 1px;
