@@ -1,12 +1,10 @@
 // https://bl.ocks.org/anonymous/bc5a9691a3417b403d4e8ade3297afa3/3a2434c1c2849e476791e581754ec27e055db4d6
 
-
-
 var data = [
     {key: 'Argentina', value: 59.7, income: 22100, dh: 0.83},
     {key: 'Bolivia', value: 57.5, income: 8720, dh: 0.703},
     {key: 'Brazil', value: 63.8, income: 14700, dh: 0.761},
-    {key: 'Canadá', value: 72.3, income: 48900, dh: 0.922},
+    {key: 'Canada', value: 72.3, income: 48900, dh: 0.922},
     {key: 'Chile', value: 62.3, income: 25100, dh: 0.847},
     {key: 'Colombia', value: 61.6, income: 14600, dh: 0.761},
     {key: 'Costa Rica', value: 71.2, income: 20300, dh: 0.794},
@@ -14,12 +12,12 @@ var data = [
     {key: 'El Salvador', value: 63.5, income: 8780, dh: 0.667},
     {key: 'United States', value: 69.4, income: 62500, dh: 0.92},
     {key: 'Guatemala', value: 64.0, income: 8640, dh: 0.651},
-    {key: 'Haití', value: 37.2, income: 2910, dh: 0.503},
+    {key: 'Haiti', value: 37.2, income: 2910, dh: 0.503},
     {key: 'Honduras', value: 59.5, income: 5730, dh: 0.623},
     {key: 'Jamaica', value: 58.9, income: 9760, dh: 0.726},
-    {key: 'México', value: 64.7, income: 19800, dh: 0.767},
+    {key: 'Mexico', value: 64.7, income: 19800, dh: 0.767},
     {key: 'Nicaragua', value: 61.4, income: 5410, dh: 0.651},
-    {key: 'Panamá', value: 63.0, income: 31500, dh: 0.795},
+    {key: 'Panama', value: 63.0, income: 31500, dh: 0.795},
     {key: 'Paraguay', value: 56.9, income: 12700, dh: 0.724},
     {key: 'Peru', value: 58.0, income: 12800, dh: 0.759},
     {key: 'Dominican Republic', value: 56.9, income: 18400, dh: 0.745},
@@ -29,16 +27,16 @@ var data = [
 
 
     
-var w = $(window).width();
-var h = $(window).height();
+var w = 700;
+var h = 500;
 var margin = {
     top: 50,
     bottom: 100,
-    left: $(window).width()/3 +200,
-    right: -$(window).width() +200
+    left: 30,
+    right: 20
 };
-var width = (w - 30 - margin.right)/2;
-var height = (h - margin.top - margin.bottom)/2;
+var width = w - margin.left - margin.right;
+var height = h - margin.top - margin.bottom;
     
 var x = d3.scaleBand()
         .domain(data.map(function(d){
@@ -87,21 +85,16 @@ var svg = d3.select("body").append("svg")
               if (this.key == idpais){
                 d3.select(this)
               	.transition("colorfade")
-								.duration(25)
-    						/*.attr("fill",function(d){
+								.duration(250)
+    						.attr("fill",function(d){
       						return "rgb(" + Math.round(d.value*2) + "," 
-
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";}) // aqui cambiar los colores
-    				}) 
-
                 + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
     				    }
-            })*/
-
+            })
     
     				.attr("fill",function(d){
       				return "rgb(" + Math.round(d.value*2) + "," 
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})  //aqui cambiar los colores 
+                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
     				    
             .attr("x", function(d,i){
                return x(d.key);
@@ -119,7 +112,7 @@ var svg = d3.select("body").append("svg")
                return y(d.value);
             })   				
             .attr("height", function(d,i){
-      				return height-y(d.value); // mueve parte de abajo
+      				return height-y(d.value);
     				})  
         				
 
@@ -140,7 +133,7 @@ var svg = d3.select("body").append("svg")
             .attr("x", function(d,i){
                 return x(d.key) + x.bandwidth()/2;
             })
-    				.attr("y", height)   		//con esto lo numeros suben con las barras		
+    				.attr("y", height)   				
     				
 						.transition("label")
 						.delay(function(d, i) {
@@ -161,21 +154,13 @@ var svg = d3.select("body").append("svg")
             .classed("bar-label", true)
     
 						.attr("transform",function(d,i){
-      				return "translate(" + (x(d.key) + x.bandwidth()/2 - 8 ) + "," + (height+15) + ")" //mueve los nombres de los paises
+      				return "translate(" + (x(d.key) + x.bandwidth()/2 - 8 ) + "," + (height+15) + ")" 
               	+ " rotate(45)" })
     				 
       			.attr("text-anchor","left")
     				.text(function(d){return d.key})
     
-
-
-
-
-
-            //aca empiezan los botones
     d3.select("#byKey").on("click", function() {
-
-
   data.sort(function(a, b,c) {
     return d3.ascending(a.key, b.key)
   })
