@@ -117,7 +117,7 @@
       position: relative;
     font-size: 1.25vw;
     left: 60%;
-    top: 10vw;
+    top: 25vw;
     width: 45%;
     border-style: none;
     border-radius: 5px;
@@ -177,13 +177,14 @@
    <div >
       <div id="navbar">
          <a  href="#sec_inicio"  href="javascript:void(0)">Inicio</a>
+         <a  href="#sec_descr" href="javascript:void(0)">Términos Importantes</a>
          <a  href="#sec_mapa" href="javascript:void(0)">Mapa</a>
          <a  href="#sec_conclusiones" href="javascript:void(0)"> Gráfico</a>
       </div>
    </div>
 
 
-   <div id="sec_mapa" class="mapa_sec">
+   <div id="sec_descr"  class="mapa_sec">
 
       <!--    <div id="my_dataviz">
              <script src="js/burbujas.js">
@@ -203,7 +204,7 @@
                      escalones enumerados del 0 al inicio y 10 al final. El último escalón representa la mejor vida posible
                      para ti y el primero representa la peor. ¿En qué escalón dirías que te encuentras parado en este 
                      punto de tu vida?". Se convirtió en una escala del 0 al 100, solo por temas de representación en porcentaje (WHR, 2018). </p>
-                  <p>
+                  <p id="p1">
                      PIB:
 El PIB es el valor total de los bienes y servicios finales producidos por un país, durante un tiempo definido.
 (http://www.2006-2012.economia.gob.mx/economia-para-todos/tema-del-dia/6950-para-que-sirve-el-pib)
@@ -211,9 +212,9 @@ Se presenta el Producto interno bruto por persona ajustado por diferencias de po
 Este se calcula como la suma del consumo realizado por los hogares (C), la inversión (I), el gasto realizado por el gobierno (G) 
 y las exportaciones netas (X-M).
                   </p>
-                  <p>
+                  <p id="p1">
                      Desarrollo Humano:
-El índice de desarrollo humano es un índice que se utiliza para clasificar los países. por nivel de "desarrollo humano". Contiene 
+El índice de desarrollo humano es un índice que se utiliza para clasificar los países por nivel de "desarrollo". Contiene 
 tres dimensiones: nivel de salud, nivel de educación y estándares de vida.
 El IDH es la media geométrica de las tres dimensiones anteriores, cuyos índices se calculan por separado con los datos de esperanza
 de vida, escolarización y renta per cápita de cada país. El resultado final arroja siempre un valor entre 0 y 1. 
@@ -221,11 +222,16 @@ de vida, escolarización y renta per cápita de cada país. El resultado final a
     
           </div>
 
-          <h1  style="margin-top: 5%; margin-bottom: -4vw;" class="subtitulo" >MAPA</h1>
+         <div id="sec_mapa"> 
 
-          <div class="instruccion2">
+            <div>
+            <h1  style="margin-top: 5%; margin-bottom: -4vw;" class="subtitulo" >MAPA</h1>
+
+          <div class="instruccion1">
             Pasa el cursor sobre un país y descubre su información
          </div>
+      </div>
+      
     
     <div id="sec_mapa" class="mapa_sec">
        <div id="information" class="instruccion">
@@ -830,6 +836,8 @@ de vida, escolarización y renta per cápita de cada país. El resultado final a
 </g>
 </svg>
   </div>
+</div>
+
 </div>
 
 <div id="sec_conclusiones">

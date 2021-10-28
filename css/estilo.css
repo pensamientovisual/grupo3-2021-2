@@ -78,6 +78,7 @@ nav {
     width: fit-content;
     height: fit-content;
     margin: auto;
+    margin-top: 12vw;
 }
 
 #sec_mapa {
@@ -202,6 +203,28 @@ nav {
 }
 
 
+.instruccion1{
+    position: relative;
+    background-color: rgb(100, 99, 99);
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.75% 1.5%;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    top:8vw;
+    left:35%;
+    width: 30%;
+}
+
 #sec_conclusiones{
     text-align:center;
+}
+
+.final{
+    font-size: 1.5vw;
+}
+
+#p1{
+    font-size: 1vw;
 }
