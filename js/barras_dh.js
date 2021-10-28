@@ -73,7 +73,7 @@ var height = (h - margin.top - margin.bottom)/2;
                      .on("mouseover",function(){
                 
                   d3.select(this)
-                    .attr("fill","red")
+                    .attr("fill","#72b86d")
                   
                       }) 				
                       .on("mouseout",function(){

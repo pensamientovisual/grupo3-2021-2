@@ -72,30 +72,17 @@ var svg = d3.select("body").append("svg")
             .append("rect")
    					.attr("class","bar")
        			.on("mouseover",function(){
-              var idpais = $(this).attr("id")
-              if (this.key == idpais){
-                $('#'+idpais).fadeTo("fast", 0.5)
                 d3.select(this)
-                  .attr("fill","red")
-                }
-    				}) 				
+                .attr("fill","orange")
+                
+    				})
     				.on("mouseout",function(){
-              var idpais = $(this).attr("id")
-              $('#'+idpais).fadeTo("fast", 1)
-              if (this.key == idpais){
-                d3.select(this)
-              	.transition("colorfade")
-								.duration(250)
-    						.attr("fill",function(d){
-      						return "rgb(" + Math.round(d.value*2) + "," 
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
-    				    }
+              d3.select(this)
+              .transition("colorfade")
+              .duration(250)
+              .attr("fill","#db6800")
             })
-    
-    				.attr("fill",function(d){
-      				return "rgb(" + Math.round(d.value*2) + "," 
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";}) //cambiar colores aqui
-    				    
+            .attr("fill","#db6800")
             .attr("x", function(d,i){
                return x(d.key);
             })
@@ -113,7 +100,8 @@ var svg = d3.select("body").append("svg")
             })   				
             .attr("height", function(d,i){
       				return height-y(d.value);
-    				})  
+    				})
+             
         				
 
    svg.selectAll("rect") 			

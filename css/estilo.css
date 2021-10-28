@@ -4,9 +4,8 @@ html{
 
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #e3ece9;
+    background: #e2ece9;
 }
-
 
 
 .container{
@@ -49,10 +48,6 @@ nav {
 /* fin página inicio, navbar, encabezado en general*/
 
 
-
-
-
-
 #mapa_izq, #mapa_der {
     display: inline-block;    
     padding: 2%;   
@@ -61,7 +56,7 @@ nav {
 
 .titulo{
     color: ghostwhite;
-    background-color: rgb(52, 87, 52);
+    background-color: #f67711;
     border-radius: 5px;
     text-align: center;
     margin: left;
@@ -137,7 +132,7 @@ nav {
 }
 
 .dropbtn {
-    background-color: #04AA6D;
+    background-color: #f67711;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -169,7 +164,7 @@ nav {
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .dropdown:hover .dropbtn {background-color: #f67711;}
 
 
   footer {
