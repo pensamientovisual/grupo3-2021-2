@@ -27,16 +27,16 @@ var data = [
 
 
     
-var w = 700;
-var h = 500;
+var w = $(window).width();
+var h = $(window).height();
 var margin = {
     top: 50,
     bottom: 100,
-    left: 30,
-    right: 20
+    left: $(window).width()/10,
+    right: -$(window).width()*7/10
 };
-var width = w - margin.left - margin.right;
-var height = h - margin.top - margin.bottom;
+var width = (w - 30 - margin.right)/2;
+var height = (h - margin.top - margin.bottom)/2;
     
 var x = d3.scaleBand()
         .domain(data.map(function(d){
@@ -90,7 +90,9 @@ var svg = d3.select("body").append("svg")
     				    }
             })
     
+
     				.attr("fill", "#db6800")
+
     				    
             .attr("x", function(d,i){
                return x(d.key);

@@ -1,40 +1,10 @@
-<<<<<<< HEAD
-'País',income,felicidad,dh
-'Argentina',22100,59.7,0.83
-'Bolivia',8720,57.5,0.703
-'Brazil',14700,63.8,0.761
-'Cameroon',3640,50.8,0.563
-'Canada',48900,72.3,0.922
-'Chile',25100,62.3,0.847
-'Colombia',14600,61.6,0.761
-'Congo',3910,54.9,0.609
-'Costa Rica',20300,71.2,0.794
-'Ecuador',11400,59.3,0.758
-'El Salvador',8780,63.5,0.667
-'Estados Unidos',62500,69.4,0.92
-'Guatemala',8640,64,0.651
-'Haiti',2910,37.2,0.503
-'Honduras',5730,59.5,0.623
-'Jamaica',9760,58.9,0.726
-'Maldives',19500,52,0.719
-'Mexico',19800,64.7,0.767
-'Montenegro',21600,55.5,0.816
-'Nicaragua',5410,61.4,0.651
-'Panama',31500,63,0.795
-'Paraguay',12700,56.9,0.724
-'Perú',12800,58,0.759
-'República Dominicana',18400,56.9,0.745
-'Uruguay',21600,64.4,0.808
-'Venezuela',8320,50.5,0.726
-=======
-"País","continent","income","felicidad","dh"
+"country","continent","lifeExp","pop","gdpPercap"
 "Argentina","Sudamerica",22100,59.7,0.83
 "Bolivia","Sudamerica",8720,57.5,0.703
 "Brazil","Sudamerica",14700,63.8,0.761
 "Canada","Norteamerica",48900,72.3,0.922
 "Chile","Sudamerica",25100,62.3,0.847
 "Colombia","Sudamerica",14600,61.6,0.761
-"Congo","Centroamerica",3910,54.9,0.609
 "Costa Rica","Centroamerica",20300,71.2,0.794
 "Ecuador","Sudamerica",11400,59.3,0.758
 "El Salvador","Centroamerica",8780,63.5,0.667
@@ -42,8 +12,7 @@
 "Guatemala","Centroamerica",8640,64,0.651
 "Haiti","Centroamerica",2910,37.2,0.503
 "Honduras","Centroamerica",5730,59.5,0.623
-"Jamaica","Norteamerica",9760,58.9,0.726
-"Maldives","Sudamerica",19500,52,0.719
+"Jamaica","Centroamerica",9760,58.9,0.726
 "Mexico","Norteamerica",19800,64.7,0.767
 "Nicaragua","Centroamerica",5410,61.4,0.651
 "Panama","Centroamerica",31500,63,0.795
@@ -52,4 +21,3 @@
 "República Dominicana","Centroamerica",18400,56.9,0.745
 "Uruguay","Sudamerica",21600,64.4,0.808
 "Venezuela","Sudamerica",8320,50.5,0.726
->>>>>>> f94a6324d15d352d19f76246c94ed62e42f95d74

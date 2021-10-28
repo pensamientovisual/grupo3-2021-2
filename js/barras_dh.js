@@ -26,16 +26,16 @@ var data2 = [
   ];
 
     
-  var w = 700;
-  var h = 500;
-  var margin = {
-      top: 50,
-      bottom: 100,
-      left: 30,
-      right: 20
-  };
-  var width = w - margin.left - margin.right;
-  var height = h - margin.top - margin.bottom;
+var w = $(window).width();
+var h = $(window).height();
+var margin = {
+    top: 50,
+    bottom: 100,
+    left: $(window).width()/10,
+    right: -$(window).width()*7/10
+};
+var width = (w - 30 - margin.right)/2;
+var height = (h - margin.top - margin.bottom)/2;
       
   var x = d3.scaleBand()
           .domain(data2.map(function(d){
