@@ -27,16 +27,16 @@ var data = [
 
 
     
-var w = $(window).width();
-var h = $(window).height();
+var w = 700;
+var h = 500;
 var margin = {
     top: 50,
     bottom: 100,
-    left: $(window).width()/10,
-    right: -$(window).width()*7/10
+    left: 30,
+    right: 20
 };
-var width = (w - 30 - margin.right)/2;
-var height = (h - margin.top - margin.bottom)/2;
+var width = w - margin.left - margin.right;
+var height = h - margin.top - margin.bottom;
     
 var x = d3.scaleBand()
         .domain(data.map(function(d){
@@ -72,17 +72,26 @@ var svg = d3.select("body").append("svg")
             .append("rect")
    					.attr("class","bar")
        			.on("mouseover",function(){
+              var idpais = $(this).attr("id")
+              if (this.key == idpais){
+                $('#'+idpais).fadeTo("fast", 0.5)
                 d3.select(this)
-                .attr("fill","orange")
-                
-    				})
+                  .attr("fill","orange")
+                }
+    				}) 				
     				.on("mouseout",function(){
-              d3.select(this)
-              .transition("colorfade")
-              .duration(250)
-              .attr("fill","#db6800")
+              var idpais = $(this).attr("id")
+              $('#'+idpais).fadeTo("fast", 1)
+              if (this.key == idpais){
+                d3.select(this)
+              	.transition("colorfade")
+								.duration(250)
+    						.attr("fill","#db6800")
+    				    }
             })
-            .attr("fill","#db6800")
+    
+    				.attr("fill", "#db6800")
+    				    
             .attr("x", function(d,i){
                return x(d.key);
             })
@@ -100,8 +109,7 @@ var svg = d3.select("body").append("svg")
             })   				
             .attr("height", function(d,i){
       				return height-y(d.value);
-    				})
-             
+    				})  
         				
 
    svg.selectAll("rect") 			
