@@ -108,22 +108,26 @@
       padding:20%;
       }
 
-.mapa_sec{
-      margin: 1.5%;
-      text-align: center;
+   .mapa_sec{
+   margin: 1.5%;
+   text-align: center;
   }
 
   .mapa_sec .instruccion{
       position: relative;
-    font-size: 1.5vw;
-    left: 50%;
-    top: 20vw;
+    font-size: 1.25vw;
+    left: 60%;
+    top: 10vw;
     width: 45%;
     border-style: none;
     border-radius: 5px;
     padding: 2.5vw 2vw;
     background: rgba(0, 0, 0, 0.25); 
     color: white;
+    width: fit-content;
+    float: left;
+    height: fit-content;
+    margin: auto;
    }
 
    </style>
@@ -179,24 +183,35 @@
    </div>
 
 
+   <div id="sec_mapa" class="mapa_sec">
 
-      <h1  class="titulo" >Índice de Felicidad Autopercibida</h1>
-      <div>
-          <pid="p1">Este es el promedio nacional por país en respuesta a la pregunta "Imaginen una escalera con
-              escalones enumerados del 0 al inicio y 10 al final. El último escalón representa la mejor vida posible
-              para ti y el primero representa la peor. ¿En qué escalón dirías que te encuentras parado en este 
-              punto de tu vida?". Se convirtió en una escala del 0 al 100, solo por temas de representación en porcentaje (WHR, 2018). [Colocar fuente] </p>
-         <p>Pasa el mouse por sobre un país del mapa y observa como se ilumina el gráfico y muestra información</p>
-      
-      </div>
-
-<div id="sec_mapa">
-   <div id="information">
-      <p id="info_pais">Información de paises</p>
-      <p id="info_pais1"> </p>
-      <p id="info_pais2"> </p>
-      <p id="info_pais3"> </p>
-   </div>
+      <!--    <div id="my_dataviz">
+             <script src="js/burbujas.js">
+             </script>
+          </div> -->
+    
+    
+          <div class="instruccion2">
+             Pasa el cursor sobre un país del mapa y averigua la información de cada uno. Los países en gris no tienen información.
+          </div>
+    
+    
+          <h1  class="titulo" >Índice de Felicidad Autopercibida</h1>
+             <div>
+                 <p id="p1">Este es el promedio nacional por país en respuesta a la pregunta "Imaginen una escalera con
+                     escalones enumerados del 0 al inicio y 10 al final. El último escalón representa la mejor vida posible
+                     para ti y el primero representa la peor. ¿En qué escalón dirías que te encuentras parado en este 
+                     punto de tu vida?". Se convirtió en una escala del 0 al 100, solo por temas de representación en porcentaje (WHR, 2018). </p>
+    
+          </div>
+    
+    <div id="sec_mapa" class="mapa_sec">
+       <div id="information" class="instruccion">
+          <p id="info_pais">Información de países</p>
+          <p id="info_pais1"> </p>
+          <p id="info_pais2"> </p>
+          <p id="info_pais3"> </p>
+       </div>
    <div class="mapa_izq" id="mapa_izq">
       <svg
  xmlns:mapsvg="http://mapsvg.com"
@@ -810,7 +825,8 @@
    <button class="btng" id="bydh">Mayor a menor índice de desarrollo humano</button>
    <br>
 </div>
-<div><script src="js/barras.js"></script></div>
+   <div><script src="js/barras.js"></script></div>
+   <p>El tamaño de las barras representa el valor de la felicidad promedio en el país</p>
 </div>
 <!-- <div id="sec_conclusiones1">
    <button id="byKey1"> Orden Alfabético</button>
