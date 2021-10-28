@@ -76,7 +76,7 @@ var svg = d3.select("body").append("svg")
               if (this.key == idpais){
                 $('#'+idpais).fadeTo("fast", 0.5)
                 d3.select(this)
-                  .attr("fill","red")
+                  .attr("fill","orange")
                 }
     				}) 				
     				.on("mouseout",function(){
@@ -86,15 +86,13 @@ var svg = d3.select("body").append("svg")
                 d3.select(this)
               	.transition("colorfade")
 								.duration(250)
-    						.attr("fill",function(d){
-      						return "rgb(" + Math.round(d.value*2) + "," 
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
+    						.attr("fill","#db6800")
     				    }
             })
     
-    				.attr("fill",function(d){
-      				return "rgb(" + Math.round(d.value*2) + "," 
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";}) //cambiar colores aqui
+
+    				.attr("fill", "#db6800")
+
     				    
             .attr("x", function(d,i){
                return x(d.key);

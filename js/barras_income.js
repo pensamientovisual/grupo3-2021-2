@@ -71,22 +71,18 @@ var svg = d3.select("body").append("svg")
    					.attr("class","bar")
        			.on("mouseover",function(){
                 d3.select(this)
-                  .attr("fill","red")
+                  .attr("fill","#eb7c00")
     				}) 				
     				.on("mouseout",function(){
               
                 d3.select(this)
               	.transition("colorfade")
 								.duration(250)
-    						.attr("fill",function(d){
-      						return "rgb(" + Math.round(d.value*2) + "," 
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
+    						.attr("fill","#d68e00")
     				    
             })
     
-    				.attr("fill",function(d){
-      				return "rgb(" + Math.round(d.value*2) + "," 
-                + Math.round(d.value*2) + "," + Math.round(d.value*2) + ")";})
+    				.attr("fill","#d68e00")
     				    
             .attr("x", function(d,i){
                return x(d.key);

@@ -77,13 +77,13 @@
   
   #navbar a:hover {
     opacity: 1;
-    background-color: #ddd;
+    background-color: #e3ece9;
     color: black;
   }
   
   #navbar a.active {
     opacity: 1;
-    background-color: #04AA6D;
+    background-color: #ff9852;
     color: white;
   }
   
